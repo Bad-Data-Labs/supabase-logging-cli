@@ -66,6 +66,7 @@ func StartDatabase(ctx context.Context, fsys afero.Fs, w io.Writer, options ...f
 			"-c", "log_rotation_age=60",
 			"-c", "log_rotation_size=0",
 			"-c", "log_truncate_on_rotation=on",
+			"-c", "log_statement=all",
 			// Ref: https://postgrespro.com/list/thread-id/2448092
 			"-c", `search_path="$user",public,extensions`,
 		}
